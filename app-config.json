@@ -10,7 +10,7 @@
     }
   },
   "prod": {
-    "ORIGIN": "http://localhost:8080",
+    "ORIGIN": "http://35.231.30.199:8080",
     "googleMaps": {
       "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0UW6O2WRIsSK89JDOh2m1PwbdNt1A3es"
     },
