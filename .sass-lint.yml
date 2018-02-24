@@ -77,7 +77,7 @@ rules:
   no-empty-rulesets: 1
   no-extends: 1
   no-ids: 1
-  no-important: 1
+  no-important: 0
   no-invalid-hex: 1
   no-mergeable-selectors:
     - 0
