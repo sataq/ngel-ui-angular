@@ -1,0 +1,13 @@
+<div class="ngel-date-picker-panel">
+    <datepicker date-format="yyyy-MM-dd" date-max-limit="{{vm.maxDate.toString()}}" date-min-limit="{{vm.minDate.toString()}}">
+        <input class="ngel-textbox" ng-model="vm.selectedDate" type="text" placeholder="Specify Date...">
+        <span class="ngel-date-picker-panel__message">{{vm.message}}</span>
+    </datepicker>
+    <button
+        type="button"
+        class="ngel-button"
+        ng-click="vm.callRefresh()"
+    >
+        Refresh
+    </button>
+</div>

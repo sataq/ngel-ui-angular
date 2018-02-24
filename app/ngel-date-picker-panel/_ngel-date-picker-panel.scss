@@ -1,0 +1,16 @@
+.ngel-date-picker-panel {
+    position: absolute;
+    top: 20%;
+    right: 0.5%;
+    background: $color-ui-background-default;
+    padding: 1rem;
+
+    datepicker {
+        padding-bottom: 1rem;
+    }
+
+    &__message {
+        color: $color-ui-text-muted;
+        font-size: $h6-font-size;
+    }
+}

@@ -1,0 +1,46 @@
+.ngel-loader {
+    $color-cmui-loading: rgba(0, 0, 0, 0.5);
+    $color-cmui-loading-inner-background: rgba(0, 0, 0, 1);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: $color-cmui-loading;
+
+    &__inner {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        height: 15em;
+        width: 15em;
+        background-color: $color-cmui-loading-inner-background;
+        border-radius: 5px;
+        box-shadow: 0 0 50px $color-cmui-loading;
+    }
+
+    &__gif {
+        height: 75%;
+        color: $color-ui-text-light;
+        background-image: url('static/images/dpLoading-2.x-skin-grey.gif');
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__text {
+        height: 25%;
+        line-height: 50px;
+        font-size: 18px;
+        color: $color-ui-text-light;
+        display: block;
+    }
+}
+
+.ngel-icon--color-blue { color: $color-ui-primary; }

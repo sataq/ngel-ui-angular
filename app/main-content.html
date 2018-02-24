@@ -1,0 +1,15 @@
+<div ng-if="loadingView" class="ngel-loader">
+    <div class="ngel-loader__inner">
+        <div class="ngel-loader__gif"></div>
+        <div class="ngel-loader__text">Loading...</div>
+    </div>
+</div>
+
+<div ng-if="loadingError" class="ns-alert ns-alert--danger">
+    <span class="ngel-icon ngel-icon--flag ngel-alert__indicator"></span>
+    <a ng-click="clearLoadingError()">
+        <i class="ngel-icon ngel-icon--cancel ngel-alert__close ngel-alert--danger__close ngel-icon--color-muted"></i>
+    </a>
+    <span>Something went wrong. Please contact support if this continues.</span>
+</div>
+<ng-view></ng-view>

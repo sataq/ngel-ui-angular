@@ -1,0 +1,14 @@
+._720kb-datepicker-calendar-header {
+    background-color: $color-ui-primary !important;
+}
+
+.ngel-date-range-picker {
+    datepicker {
+        padding-bottom: 1rem;
+    }
+
+    &__message {
+        color: $color-ui-text-muted;
+        font-size: $h6-font-size;
+    }
+}
