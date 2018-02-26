@@ -14,7 +14,7 @@ const DEFAULT_COLOR_BLACK = 'rgb(0, 0, 0)';
 const DEFAULT_COLOR_WHITE = 'rgb(255, 255, 255)';
 const DEFAULT_ICON = 'CIRCLE';
 const DEFAULT_FILL_OPACITY = 0;
-const DEFAULT_SCALE = 5;
+const DEFAULT_SCALE = 10;
 const DEFAULT_STROKE_WEIGHT = 0.5;
 
 /* @ngInject */
@@ -24,22 +24,22 @@ export function stationsService($http: angular.IHttpService, apiUrl: ApiUrl, $q:
         if (station.latestPM25Mean !== -1) {
             const pm25Mean = station.latestPM25Mean;
             if (pm25Mean >= 0 && pm25Mean <= 12) {
-                return 'rgb(99, 230, 17)';
+                return 'rgb(0, 228, 0)';
             }
             if (pm25Mean >= 12.1 && pm25Mean <= 35.4) {
-                return 'rgb(254, 250, 41)';
+                return 'rgb(255, 255, 0)';
             }
             if (pm25Mean >= 35.5 && pm25Mean <= 55.4) {
-                return 'rgb(236, 111, 37)';
+                return 'rgb(255, 126, 0)';
             }
             if (pm25Mean >= 55.5 && pm25Mean <= 150.4) {
-                return 'rgb(230, 46, 37)';
+                return 'rgb(255, 0, 0)';
             }
             if (pm25Mean >= 150.5 && pm25Mean <= 250.4) {
-                return 'rgb(130, 28, 61)';
+                return 'rgb(153, 0, 76)';
             }
             if (pm25Mean >= 250.5) {
-                return 'rgb(103, 21, 27)';
+                return 'rgb(126, 0, 35)';
             }
         }
         return DEFAULT_COLOR_BLACK;
@@ -49,17 +49,7 @@ export function stationsService($http: angular.IHttpService, apiUrl: ApiUrl, $q:
         if (station.latestPM25Mean === -1.0) {
           return DEFAULT_FILL_OPACITY;
         }
-        if (station.latestPM25Mean >= 100) {
-          return 1;
-        }
-        return station.latestPM25Mean / 100;
-    }
-
-    let getScale = (station) => {
-        if (station.latestPM25Mean === -1.0) {
-          return DEFAULT_SCALE;
-        }
-        return station.latestPM25Mean / 5;
+        return 1;
     }
 
     let getStrokeColor = (station) => {
@@ -90,7 +80,7 @@ export function stationsService($http: angular.IHttpService, apiUrl: ApiUrl, $q:
                                 path: DEFAULT_ICON,
                                 fillColor: getColor(station),
                                 fillOpacity: getFillOpacity(station),
-                                scale: getScale(station),
+                                scale: DEFAULT_SCALE,
                                 strokeColor: getStrokeColor(station),
                                 strokeWeight: DEFAULT_STROKE_WEIGHT
                             };

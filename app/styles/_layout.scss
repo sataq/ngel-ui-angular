@@ -1,4 +1,4 @@
-$ngel-header-height: 72px; // To maintain consistency with existing header styles
+$ngel-header-height: 80px; // To maintain consistency with existing header styles
 $sidebar-width: 10.5 * $baseline-unit;
 
 .ngel-layout {
@@ -58,11 +58,15 @@ $sidebar-width: 10.5 * $baseline-unit;
         z-index: 10;
     }
 
+    &__logo {
+        @media (max-width: 1024px) { width: 100%; }
+        background-image: url('../static/images/logl_d200x60.png');
+    }
+
     &__logo-link {
-        width: $sidebar-width;
         color: $color-ui-text-light;
         margin: auto;
-        padding: 2rem;
+        padding: 1rem;
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
