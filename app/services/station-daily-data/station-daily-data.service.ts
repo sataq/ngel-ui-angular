@@ -1,6 +1,7 @@
 import * as angular from "angular";
 import {ApiUrl} from "../../models/app-config.model";
 import {Icon, StationDailyDataCollection, StationsWithIconCollection, StationCollection} from "../../models/station.model";
+import { StationColorService } from "../station-colors/station-colors.service";
 
 export interface StationsService {
     getStations: (occurred?: number) => angular.IPromise<StationsWithIconCollection>;
@@ -10,39 +11,17 @@ export interface StationsService {
 interface StationsResponse { data: StationCollection };
 interface StationDailyDataResponse { data: StationDailyDataCollection };
 
-const DEFAULT_COLOR_BLACK = 'rgb(0, 0, 0)';
-const DEFAULT_COLOR_WHITE = 'rgb(255, 255, 255)';
 const DEFAULT_ICON = 'CIRCLE';
 const DEFAULT_FILL_OPACITY = 0;
 const DEFAULT_SCALE = 10;
 const DEFAULT_STROKE_WEIGHT = 0.5;
 
 /* @ngInject */
-export function stationsService($http: angular.IHttpService, apiUrl: ApiUrl, $q: angular.IQService): StationsService {
+export function stationsService($http: angular.IHttpService, apiUrl: ApiUrl, $q: angular.IQService,
+    stationColorService: StationColorService): StationsService {
 
     let getColor = (station) => {
-        if (station.latestPM25Mean !== -1) {
-            const pm25Mean = station.latestPM25Mean;
-            if (pm25Mean >= 0 && pm25Mean <= 12) {
-                return 'rgb(0, 228, 0)';
-            }
-            if (pm25Mean >= 12.1 && pm25Mean <= 35.4) {
-                return 'rgb(255, 255, 0)';
-            }
-            if (pm25Mean >= 35.5 && pm25Mean <= 55.4) {
-                return 'rgb(255, 126, 0)';
-            }
-            if (pm25Mean >= 55.5 && pm25Mean <= 150.4) {
-                return 'rgb(255, 0, 0)';
-            }
-            if (pm25Mean >= 150.5 && pm25Mean <= 250.4) {
-                return 'rgb(153, 0, 76)';
-            }
-            if (pm25Mean >= 250.5) {
-                return 'rgb(126, 0, 35)';
-            }
-        }
-        return DEFAULT_COLOR_BLACK;
+        return stationColorService.getColor(station.latestPM25Mean);
     };
 
     let getFillOpacity = (station) => {
@@ -53,10 +32,7 @@ export function stationsService($http: angular.IHttpService, apiUrl: ApiUrl, $q:
     }
 
     let getStrokeColor = (station) => {
-        if (station.latestPM25Mean === -1.0) {
-          return DEFAULT_COLOR_BLACK;
-        }
-        return DEFAULT_COLOR_WHITE;
+        return stationColorService.getStrokeColor(station.latestPM25Mean);
     }
 
     let handleErrorResponse = (errorResponse): any => {

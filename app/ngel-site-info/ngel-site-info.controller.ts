@@ -104,7 +104,6 @@ export class NgelSiteInfoController {
     }
 
     private populateScatterPlot = (response: StationDailyDataCollection) => {
-        console.log(response);
         if (response.stationDailyData) {
             this.dataTable = new google.visualization.DataTable();
             this.dataTable.addColumn('number', 'TAU3 Mean');

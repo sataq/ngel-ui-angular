@@ -5,6 +5,7 @@ import { ngelSiteInfo } from "./ngel-site-info/ngel-site-info";
 import { ngelScatterPlot } from "./ngel-scatter-plot/ngel-scatter-plot";
 import { ngelDateRangePicker } from "./ngel-date-range-picker/ngel-date-range-picker";
 import { ngelDatePickerPanel } from "./ngel-date-picker-panel/ngel-date-picker-panel";
+import { ngelColorScale } from "./ngel-color-scale/ngel-color-scale";
 
 export function initComponents(app: angular.IModule) {
     app.directive("ngelLanding", () => ngelLanding);
@@ -13,4 +14,5 @@ export function initComponents(app: angular.IModule) {
     app.directive("ngelScatterPlot", () => ngelScatterPlot);
     app.directive("ngelDateRangePicker", () => ngelDateRangePicker);
     app.directive("ngelDatePickerPanel", () => ngelDatePickerPanel);
+    app.directive("ngelColorScale", () => ngelColorScale);
 }

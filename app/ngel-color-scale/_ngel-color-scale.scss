@@ -1,0 +1,48 @@
+$ngel-color-green: rgb(0, 228, 0);
+$ngel-color-yellow: rgb(255, 255, 0);
+$ngel-color-orange: rgb(255, 126, 0);
+$ngel-color-red: rgb(255, 0, 0);
+$ngel-color-jazzberry-jam: rgb(153, 0, 76);
+$ngel-color-burgundy: rgb(126, 0, 35);
+.ngel-color-scale {
+    position: absolute;
+    bottom: -84px;
+    right: 40px;
+    background: $color-ui-background-default;
+    width: 216px;
+
+    &__row--padded {
+        padding: 0.1rem 0;
+    }
+
+    &__color {
+        width: 75px;
+        height: 15px;
+        border-radius: 20%;
+        display: inline-block;
+
+        &--green {
+            background-color: $ngel-color-green;
+        }
+
+        &--yellow {
+            background-color: $ngel-color-yellow;
+        }
+
+        &--orange {
+            background-color: $ngel-color-orange;
+        }
+
+        &--red {
+            background-color: $ngel-color-red;
+        }
+
+        &--jazzberry-jam {
+            background-color: $ngel-color-jazzberry-jam;
+        }
+
+        &--burgundy {
+            background-color: $ngel-color-burgundy;
+        }
+    }
+}
