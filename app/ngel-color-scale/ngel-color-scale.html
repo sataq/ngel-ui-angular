@@ -1,14 +1,14 @@
 <div class="ngel-color-scale ngel-grid ngel-grid--fluid">
     <div class="ngel-grid__row ngel-grid__row--padded">
-        <div class="ngel-grid__col--lg-6">
-            <label class="ngel-label">PM2.5 (&#x3bc;gm-3)</label>
+        <div class="ngel-grid__col--lg-7">
+            <label class="ngel-label">PM2.5 (&#x3bc;g/m3)</label>
         </div>
         <div class="ngel-grid__col--lg-4">
             <label class="ngel-label">Color</label>
         </div>
     </div>
     <div class="ngel-grid__row ngel-color-scale__row--padded" ng-repeat="pm25RangeWithColor in vm.pm25RangesWithColor">
-        <div class="ngel-grid__col--lg-6">
+        <div class="ngel-grid__col--lg-7">
             <span>{{pm25RangeWithColor.range}}</span>
         </div>
         <div class="ngel-grid__col--lg-4">

@@ -1,9 +1,17 @@
 <div class="ngel-date-range-picker">
-    <datepicker date-format="yyyy-MM-dd" date-max-limit="{{vm.maxDate.toString()}}" date-min-limit="{{vm.minDate.toString()}}">
-        <input class="ngel-textbox" ng-model="vm.startDate" type="text" placeholder="Start Date...">
-    </datepicker>
-    <datepicker date-format="yyyy-MM-dd" date-max-limit="{{vm.maxDate.toString()}}" date-min-limit="{{vm.minDate.toString()}}">
-        <input class="ngel-textbox" ng-model="vm.endDate" type="text" placeholder="End Date...">
-    </datepicker>
+    <div class="ngel-grid ngel-grid--fluid">
+        <div class="ngel-grid__row ngel-grid__row--padded">
+            <div class="ngel-grid__col--lg-6">
+                <datepicker date-format="yyyy-MM-dd" date-max-limit="{{vm.maxDate.toString()}}" date-min-limit="{{vm.minDate.toString()}}">
+                    <input class="ngel-textbox" ng-model="vm.startDate" type="text" placeholder="Start Date...">
+                </datepicker>
+            </div>
+            <div class="ngel-grid__col--lg-6">
+                <datepicker date-format="yyyy-MM-dd" date-max-limit="{{vm.maxDate.toString()}}" date-min-limit="{{vm.minDate.toString()}}">
+                    <input class="ngel-textbox" ng-model="vm.endDate" type="text" placeholder="End Date...">
+                </datepicker>
+            </div>
+        </div>
+    </div>
     <span class="ngel-date-range-picker__message">{{vm.getMessage()}}</span>
 </div>

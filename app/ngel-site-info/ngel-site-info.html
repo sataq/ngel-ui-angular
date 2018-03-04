@@ -5,18 +5,26 @@
             <h2>{{vm.station.name}}</h2>
         </div>
         <div class="ngel-drawer__body">
-            <label class="ngel-label">NgelId: {{vm.station.ngelId}}</label>
-            <label class="ngel-label">City: {{vm.station.city}}</label>
-            <label class="ngel-label">Country: {{vm.station.country}}</label>
-            <label class="ngel-label">Latitude: {{vm.station.latitude}}</label>
-            <label class="ngel-label">Longitude: {{vm.station.longitude}}</label>
+            <div class="ngel-grid ngel-grid--fluid">
+                <div class="ngel-grid__row ngel-grid__row--padded">
+                    <div class="ngel-grid__col--lg-4">
+                        <label class="ngel-label">NgelId: {{vm.station.ngelId}}</label>
+                        <label class="ngel-label">City: {{vm.station.city}}</label>
+                        <label class="ngel-label">Country: {{vm.station.country}}</label>
+                    </div>
+                    <div class="ngel-grid__col--lg-4">
+                        <label class="ngel-label">Latitude: {{vm.station.latitude}}</label>
+                        <label class="ngel-label">Longitude: {{vm.station.longitude}}</label>
+                    </div>
+                </div>
+            </div>
 
             <form class="ngel-form ngel-form--muted" ng-if="vm.validData">
                 <fieldset class="ngel-fieldset ngel-fieldset--hugged">
                     <legend class="ngel-fieldset__legend">Select Dates</legend>
                     <div class="ngel-grid ngel-grid--fluid">
                         <div class="ngel-grid__row ngel-grid__row--padded">
-                            <div class="ngel-grid__col--lg-1">
+                            <div class="ngel-grid__col--lg-3">
                                 <label class="ngel-label" for="inline-start-date">
                                     Select Date Range
                                 </label>

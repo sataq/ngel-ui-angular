@@ -39,19 +39,17 @@ $sidebar-width: 10.5 * $baseline-unit;
 }
 
 .ngel-top-nav {
-    @mixin list {
-        padding: 0 $baseline-unit 0 2 * $baseline-increment;
-
-        @media (min-width: 1025px) and (max-width: 1220px) { padding: 0; }
-        @media (max-width: 1024px) { display: none; }
-    }
-
     $divider-gradient: linear-gradient(to bottom, $color-ui-transparent 0%, $color-ui-background-default 50%, $color-ui-transparent 100%);
 
     width: 100%;
     background-color: $color-ui-primary-blue;
     height: $ngel-header-height;
     display: flex;
+
+    &__header {
+        color: $color-ui-background-default;
+        padding-top: 2rem;
+    }
 
     &--fixed {
         position: fixed;
@@ -65,7 +63,6 @@ $sidebar-width: 10.5 * $baseline-unit;
 
     &__logo-link {
         color: $color-ui-text-light;
-        margin: auto;
         padding: 1rem;
         flex-shrink: 0;
         display: flex;
@@ -77,13 +74,5 @@ $sidebar-width: 10.5 * $baseline-unit;
             max-width: 150px; // Ensure logo text lines up with second level mobile menu text
             max-height: 100%;
         }
-    }
-
-    // Main
-    &__main-list {
-        @include list;
-        flex-basis: 100%;
-
-        @media (min-width: 1025px) and (max-width: 1220px) { padding: 0; }
     }
 }

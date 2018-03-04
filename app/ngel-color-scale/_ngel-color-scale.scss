@@ -4,10 +4,11 @@ $ngel-color-orange: rgb(255, 126, 0);
 $ngel-color-red: rgb(255, 0, 0);
 $ngel-color-jazzberry-jam: rgb(153, 0, 76);
 $ngel-color-burgundy: rgb(126, 0, 35);
+$ngel-color-black: rgb(0, 0, 0);
 .ngel-color-scale {
     position: absolute;
-    bottom: -84px;
-    right: 40px;
+    bottom: 2.8rem;
+    right: 4rem;
     background: $color-ui-background-default;
     width: 216px;
 
@@ -20,6 +21,10 @@ $ngel-color-burgundy: rgb(126, 0, 35);
         height: 15px;
         border-radius: 20%;
         display: inline-block;
+
+        &--black {
+            background-color: $ngel-color-black;
+        }
 
         &--green {
             background-color: $ngel-color-green;

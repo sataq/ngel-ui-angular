@@ -1,6 +1,11 @@
 .ngel-scatter-plot-container {
     position: relative;
 
+    &--plot {
+        width: 675px;
+        height: 400px;
+    }
+
     &--overlay {
         position: absolute;
         top: 40%;  // chartArea top

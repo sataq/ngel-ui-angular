@@ -17,7 +17,7 @@ const CHART_OPTIONS = {
         },
     } as google.visualization.ChartLegend,
     hAxis: { title: 'MODIS Aerosol Optical Depth at 550 nm' },
-    vAxis: { title: `PM2.5 Mass Concentration \u03BC (gram) m\u207B\u00B3` },
+    vAxis: { title: `PM2.5 Mass Concentration \u03BCg/m3` },
     backgroundColor: '#d3d3d3',
     colors: ['#ff0000'],
     chartArea: {
