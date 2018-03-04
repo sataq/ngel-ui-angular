@@ -18,81 +18,81 @@ module.exports = () => {
             name: 'Alto-Hospicio',
             city: 'Alto-Hospicio',
             country: 'CL',
-            latitude: '-20.290466881209',
-            longitude: '-70.100192427636',
-            latestPM25Mean: '7.330000'
+            latitude: -20.290466881209,
+            longitude: -70.100192427636,
+            latestPM25Mean: 7.330000
         },
         {
             ngelId: 'NGEL_OAPM_00003',
             name: 'São-José-Do-Rio-Preto',
             city: 'São-José-Do-Rio-Preto',
             country: 'BR',
-            latitude: '-20.784689280000',
-            longitude: '-49.398277790000',
-            latestPM25Mean: '26.500000'
+            latitude: -20.784689280000,
+            longitude: -49.398277790000,
+            latestPM25Mean: 26.500000
         },
         {
             ngelId: 'NGEL_OAPM_00004',
             name: 'Ribeirão-Preto-Centro',
             city: 'Sao-Paulo',
             country: 'BR',
-            latitude: '-21.177065940000',
-            longitude: '-47.818987670000',
-            latestPM25Mean: '10.500000'
+            latitude: -21.177065940000,
+            longitude: -47.818987670000,
+            latestPM25Mean: 10.500000
         },
         {
             ngelId: 'NGEL_OAPM_00005',
             name: 'Escuela-E-10',
             city: 'Tocopilla',
             country: 'CL',
-            latitude: '-22.085518710314',
-            longitude: '-70.188682515839',
-            latestPM25Mean: '7.241000'
+            latitude: -22.085518710314,
+            longitude: -70.188682515839,
+            latestPM25Mean: 7.241000
         },
         {
             ngelId: 'NGEL_OAPM_00006',
             name: 'Bomberos',
             city: 'Tocopilla',
             country: 'CL',
-            latitude: '-22.111064000000',
-            longitude: '-70.210828000000',
-            latestPM25Mean: '20.587000'
+            latitude: -22.111064000000,
+            longitude: -70.210828000000,
+            latestPM25Mean: 20.587000
         },
         {
             ngelId: 'NGEL_OAPM_00007',
             name: 'Colegio-Pedro-Vergara-Keller',
             city: 'Calama',
             country: 'CL',
-            latitude: '-22.442839063040',
-            longitude: '-68.932546346863',
-            latestPM25Mean: '13.833000'
+            latitude: -22.442839063040,
+            longitude: -68.932546346863,
+            latestPM25Mean: 13.833000
         },
         {
             ngelId: 'NGEL_OAPM_00008',
             name: 'Complejo-Deportivo-23-de-Marzo',
             city: 'Calama',
             country: 'CL',
-            latitude: '-22.460270722943',
-            longitude: '-68.937706917007',
-            latestPM25Mean: '4.431000'
+            latitude: -22.460270722943,
+            longitude: -68.937706917007,
+            latestPM25Mean: 4.431000
         },
         {
             ngelId: 'NGEL_OAPM_00009',
             name: 'Estación-Centro',
             city: 'Calama',
             country: 'CL',
-            latitude: '-22.462144644634',
-            longitude: '-68.928061693390',
-            latestPM25Mean: '10.009000'
+            latitude: -22.462144644634,
+            longitude: -68.928061693390,
+            latestPM25Mean: 45.623000
         },
         {
             ngelId: 'NGEL_OAPM_00010',
             name: 'Piracicaba',
             city: 'Piracicaba',
             country: 'BR',
-            latitude: '-22.701222340000',
-            longitude: '-47.649652690000',
-            latestPM25Mean: '14.500000'
+            latitude: -22.701222340000,
+            longitude: -47.649652690000,
+            latestPM25Mean: 12.053000
         }
     ];
 

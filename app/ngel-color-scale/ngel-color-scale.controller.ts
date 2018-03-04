@@ -8,7 +8,7 @@ export class NgelColorScaleController {
     $onInit() {
         this.pm25RangesWithColor = [
             {
-                range: '<=-1',
+                range: '<=-1.0',
                 colorClass: 'ngel-color-scale__color--black'
             },
             {

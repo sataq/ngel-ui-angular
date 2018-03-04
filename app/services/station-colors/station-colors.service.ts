@@ -16,22 +16,22 @@ const DEFAULT_BROWN = 'rgb(126, 0, 35)';
 export function stationColorService(): StationColorService {
     return {
         getColor: (pm25Mean: number): string => {
-            if (pm25Mean === -1) {
+            if (pm25Mean === -1.0) {
                 return DEFAULT_COLOR_BLACK;
             }
-            if (pm25Mean >= 0 && pm25Mean <= 12) {
+            if (pm25Mean >= 0 && pm25Mean <= 12.099999) {
                 return DEFAULT_GREEN;
             }
-            if (pm25Mean >= 12.1 && pm25Mean <= 35.4) {
+            if (pm25Mean >= 12.1 && pm25Mean <= 35.499999) {
                 return DEFAULT_YELLOW;
             }
-            if (pm25Mean >= 35.5 && pm25Mean <= 55.4) {
+            if (pm25Mean >= 35.5 && pm25Mean <= 55.499999) {
                 return DEFAULT_ORANGE;
             }
-            if (pm25Mean >= 55.5 && pm25Mean <= 150.4) {
+            if (pm25Mean >= 55.5 && pm25Mean <= 150.499999) {
                 return DEFAULT_RED;
             }
-            if (pm25Mean >= 150.5 && pm25Mean <= 250.4) {
+            if (pm25Mean >= 150.5 && pm25Mean <= 250.499999) {
                 return DEFAULT_PURPLE;
             }
             if (pm25Mean >= 250.5) {
